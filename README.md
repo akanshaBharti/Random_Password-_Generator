@@ -3,6 +3,7 @@
 
 ✨Welcome to the Random Password Generator – your go-to tool for creating secure and unique passwords tailored to your preferences.✨
 
+## Overview
 This password generator provides a simple and secure way to generate random passwords based on your specific criteria. Whether you need a password for your email, social media, or online accounts, our tool has you covered.
 
 ## Features
