@@ -28,6 +28,10 @@ const PasswordGenerator = () => {
     setPassword(newPassword);
   };
 
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(password);
+  };
+
   return (
     <div className="container mx-auto my-8 p-4 rounded-md">
       <div className="flex flex-col-reverse md:flex-row items-center justify-center mb-8">
@@ -73,7 +77,7 @@ const PasswordGenerator = () => {
               onChange={() => setIncludeNumbers(!includeNumbers)}
             />
           </div>
-          <div className="mb-4">
+          <div className="mb-4 ">
             <label className="text-blue-900 mr-2 font-semibold">Include Special Characters:</label>
             <input
               type="checkbox"
@@ -81,11 +85,17 @@ const PasswordGenerator = () => {
               onChange={() => setIncludeSpecialChars(!includeSpecialChars)}
             />
           </div>
-          <button
+          <button 
             className='button'
             onClick={generatePassword}
           >
             Generate Password
+          </button>
+          <button
+            className='button mt-4 bg-green-500 hover:bg-green-700'
+            onClick={copyToClipboard}
+          >
+            Copy to Clipboard
           </button>
           <div className="mt-8 mb-4">
             <p className="text-2xl font-bold text-green-600">{password}</p>
