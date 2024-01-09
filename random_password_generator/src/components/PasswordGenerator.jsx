@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import './passwordgenerator.css';
 
 const PasswordGenerator = () => {
   const [password, setPassword] = useState('');
-  const [passwordLength, setPasswordLength] = useState(12);
+  const [passwordLength, setPasswordLength] = useState(8);
   const [includeUppercase, setIncludeUppercase] = useState(true);
   const [includeNumbers, setIncludeNumbers] = useState(true);
   const [includeSpecialChars, setIncludeSpecialChars] = useState(true);
@@ -28,11 +29,11 @@ const PasswordGenerator = () => {
   };
 
   return (
-    <div className="container mx-auto my-8 p-4">
+    <div className="container mx-auto my-8 p-4 rounded-md">
       <div className="flex flex-col-reverse md:flex-row items-center justify-center mb-8">
         <div className="flex-shrink-0">
           <img
-            src="mona.png"
+            src="img1.png"
             alt=""
             className="rounded-md"
           />
@@ -48,7 +49,7 @@ const PasswordGenerator = () => {
             </p>
           </div>
           <div className="mb-4 ">
-            <label className="text-blue-900">Password Length:</label>
+            <label className="text-blue-900 font-semibold">Password Length:</label>
             <input
               type="number"
               value={passwordLength}
@@ -57,7 +58,7 @@ const PasswordGenerator = () => {
             />
           </div>
           <div className="mb-4">
-            <label className="text-blue-900 mr-2">Include Uppercase:</label>
+            <label className="text-blue-900 mr-2 font-semibold">Include Uppercase:</label>
             <input
               type="checkbox"
               checked={includeUppercase}
@@ -65,7 +66,7 @@ const PasswordGenerator = () => {
             />
           </div>
           <div className="mb-4">
-            <label className="text-blue-900 mr-2">Include Numbers:</label>
+            <label className="text-blue-900 mr-2 font-semibold">Include Numbers:</label>
             <input
               type="checkbox"
               checked={includeNumbers}
@@ -73,7 +74,7 @@ const PasswordGenerator = () => {
             />
           </div>
           <div className="mb-4">
-            <label className="text-blue-900 mr-2">Include Special Characters:</label>
+            <label className="text-blue-900 mr-2 font-semibold">Include Special Characters:</label>
             <input
               type="checkbox"
               checked={includeSpecialChars}
@@ -81,13 +82,13 @@ const PasswordGenerator = () => {
             />
           </div>
           <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            className='button'
             onClick={generatePassword}
           >
             Generate Password
           </button>
-          <div className="mt-4 mb-4">
-            <p className="text-xl font-bold text-green-600">{password}</p>
+          <div className="mt-8 mb-4">
+            <p className="text-2xl font-bold text-green-600">{password}</p>
           </div>
         </div>
       </div>
