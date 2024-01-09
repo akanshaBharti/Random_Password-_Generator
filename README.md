@@ -6,6 +6,9 @@
 ## Overview
 This password generator provides a simple and secure way to generate random passwords based on your specific criteria. Whether you need a password for your email, social media, or online accounts, our tool has you covered.
 
+![image](https://github.com/akanshaBharti/Random_Password_Generator/assets/112724805/5e9b89d4-d271-4d0b-84d0-e8c71963e453)
+
+
 ## Features
 - Generate highly secure passwords
 - Customize password length
